@@ -1,0 +1,10 @@
+<div>
+  <h1>My first view</h1>
+
+  <h2>Todo List:</h2>
+  <ul>
+    <% _.each(todos, function (todo) { %>
+    <li><%= todo.title %></li>
+    <% }) %>
+  </ul>
+</div>
