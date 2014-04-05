@@ -1,2 +1,2 @@
 # todoapp
-### a Sails application
+### a Todo application using Sailsjs
