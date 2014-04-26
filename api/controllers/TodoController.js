@@ -42,13 +42,24 @@ module.exports = {
    */
    create: function (req, res) {
     
-    // Send a JSON response
-    todo = {
-      title: req.param('title'),
-      status: 'in progress'
-    }
-    Todo.save(todo);
-    return res.json(todo);
+    // // Send a JSON response
+    // todo = {
+    //   title: req.param('title'),
+    //   status: 'in progress'
+    // }
+    // Todo.save(todo);
+    // return res.json(todo);
+
+    var title = req.param("title");
+    Todo.create({title: title},function todoCreated(err,user){
+      if (err) {
+
+      }
+      else {
+         res.json(user);
+      }
+    });
+   
   },
 
 
